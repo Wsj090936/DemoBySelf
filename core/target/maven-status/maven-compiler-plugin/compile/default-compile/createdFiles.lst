@@ -1,0 +1,4 @@
+com\shijia\github\springmvc\servlet\DispatcherServletBySelf.class
+com\shijia\github\springmvc\annotations\ControllerBySelf.class
+com\shijia\github\springmvc\annotations\RequestMappingBySelf.class
+com\shijia\github\springmvc\annotations\RequestParamBySelf.class

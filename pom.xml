@@ -6,7 +6,12 @@
 
     <groupId>com.shijia.github</groupId>
     <artifactId>self-springMVC</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>springMVC-web</module>
+        <module>core</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,6 +19,21 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>5.0.2.RELEASE</spring.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>3.0.1</version>
+            </dependency>
+            <dependency>
+                <artifactId>core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <groupId>com.shijia.github</groupId>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
 <!--        <dependency>-->
@@ -41,12 +61,7 @@
 <!--            <scope>provided</scope>-->
 <!--        </dependency>-->
 
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
-        </dependency>
+
 <!--        <dependency>-->
 <!--            <groupId>javax.com.shijia.github.springmvc.servlet.jsp</groupId>-->
 <!--            <artifactId>jsp-api</artifactId>-->
